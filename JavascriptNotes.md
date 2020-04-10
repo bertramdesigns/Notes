@@ -1,6 +1,18 @@
 ## Introduction
 
-I have found myself looking for the same thing over and over. Here are the solutions to some of the typical situations I find mysleft in.
+I have found myself looking for the same thing over and over. Here are the solutions to some of the typical situations I find myself in.
+
+### Check variable type
+Dylan... remember:
+**First, just cosole.log the variable!**
+
+Next do it in code: 
+* **typeof()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+    * Good for checking objects
+    * returns string descriptor
+
+* **isArray()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+    * returns bool
 
 ### Iterating through objects and arrays
 
