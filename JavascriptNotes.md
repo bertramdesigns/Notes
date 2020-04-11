@@ -16,6 +16,9 @@ Next do it in code:
 
 ### Iterating through objects and arrays
 
+**Examples:**
+* manipulating_object_array.js
+
 #### Objects
 https://zellwk.com/blog/looping-through-js-objects/
 ##### Pre-ES6:
