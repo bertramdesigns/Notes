@@ -31,3 +31,26 @@ The problem with a for...in loop is that it iterates through properties in the P
     }
 
 ##### ES6:
+
+
+### Conditional REndering 
+https://www.robinwieruch.de/conditional-rendering-react
+
+#### Enums
+
+Example:
+````
+    function Notification({ text, status }) {
+        return (
+            <div>
+            {
+                {
+                info: <Info text={text} />,
+                warning: <Warning text={text} />,
+                error: <Error text={text} />,
+                }[status]
+            }
+            </div>
+        );
+     }
+````
