@@ -14,13 +14,39 @@ Next do it in code:
 * **isArray()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
     * returns bool
 
-### Iterating through objects and arrays
+### Objects and arrays
 
+#### Manipulating Objects directly
+
+**With variables:** 
+Post ES6 it is as easy as 
+(credit: https://www.samanthaming.com/tidbits/37-dynamic-property-name-with-es6/)
+
+let cake = '🍰';
+
+// ❌ Old way requires 2 steps
+let pan = {
+  id: 1,
+};
+pan[cake] = '🥞';
+
+// ✅ YAY, much easier with ES6
+let pan = {
+  id: 1,
+  [cake]: '🥞',
+};
+
+
+### Handling Image Uploads with File Input
+
+https://yaz.in/p/blobs-files-and-data-uris/
+
+#### Iterating through Objects and Arrays
 **Examples:**
 * manipulating_object_array.js
 
-#### Objects
-https://zellwk.com/blog/looping-through-js-objects/
+Objects : https://zellwk.com/blog/looping-through-js-objects/
+
 ##### Pre-ES6:
 The problem with a for...in loop is that it iterates through properties in the Prototype chain. When you loop through an object with the for...in loop, you need to check if the property belongs to the object. You can do this with hasOwnProperty.
 
@@ -54,3 +80,65 @@ Example:
         );
      }
 ````
+
+## Spread Syntax (...)
+
+https://code4developers.com/spread-syntax-in-javascript/
+https://codeburst.io/a-simple-guide-to-destructuring-and-es6-spread-operator-e02212af5831
+
+
+## React
+
+### useEffect()
+https://dev.to/spukas/4-ways-to-useeffect-pf6
+
+## Redux
+
+### Summary
+
+- STORE
+- ACTION
+- REDUCER
+- DISPATCH
+
+
+//STORE -> Globalized state
+
+//ACTION
+const savePost = () => {
+    return {
+        type: 'SAVE_POST'
+    }
+}
+
+//REDUCER
+const post = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_META':
+            return [
+                ...state,
+                {
+                    id: action.id,
+                    text: action.text
+                }
+            ]
+        case 'ADD_IMAGE':
+            return [
+                ...state,
+                {
+                    id: 'image'
+                }
+            ]
+
+    }
+}
+
+//DISPATCH
+
+https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44
+
+
+
+
+
+
