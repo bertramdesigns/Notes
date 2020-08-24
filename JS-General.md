@@ -1,3 +1,21 @@
+# General notes on Javascript
+- [Introduction](#introduction)
+  - [Check variable type](#check-variable-type)
+  - [Objects and arrays](#objects-and-arrays)
+    - [Manipulating Objects directly](#manipulating-objects-directly)
+  - [Handling Image Uploads with File Input](#handling-image-uploads-with-file-input)
+    - [Iterating through Objects and Arrays](#iterating-through-objects-and-arrays)
+      - [Pre-ES6:](#pre-es6)
+      - [ES6:](#es6)
+  - [Conditional Rendering](#conditional-rendering)
+    - [Enums](#enums)
+- [Spread Syntax (...)](#spread-syntax-)
+- [React](#react)
+  - [useEffect()](#useeffect)
+- [Redux](#redux)
+  - [Summary](#summary)
+  - [Async Functions](#async-functions)
+
 ## Introduction
 
 I have found myself looking for the same thing over and over. Here are the solutions to some of the typical situations I find myself in.
@@ -7,36 +25,39 @@ I have found myself looking for the same thing over and over. Here are the solut
 Dylan... remember:
 **First, just cosole.log the variable!**
 
-Next do it in code: 
+Next do it in code:
 
-* **typeof()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
-    - Good for checking objects
-    - returns string descriptor
+- **typeof()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
-* **isArray()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
-    - returns bool
+  - Good for checking objects
+  - returns string descriptor
+
+- **isArray()** - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+  - returns bool
 
 ### Objects and arrays
 
 #### Manipulating Objects directly
 
-**With variables:** 
-Post ES6 it is as easy as 
+**With variables:**
+Post ES6 it is as easy as
 (credit: https://www.samanthaming.com/tidbits/37-dynamic-property-name-with-es6/)
 
-let cake = '🍰'; 
+```js
+let cake = "🍰";
 
 // ❌ Old way requires 2 steps
 let pan = {
-  id: 1, 
-}; 
-pan[cake] = '🥞'; 
+  id: 1,
+};
+pan[cake] = "🥞";
 
 // ✅ YAY, much easier with ES6
 let pan = {
-  id: 1, 
-  [cake]: '🥞', 
-}; 
+  id: 1,
+  [cake]: "🥞",
+};
+```
 
 ### Handling Image Uploads with File Input
 
@@ -46,9 +67,9 @@ https://yaz.in/p/blobs-files-and-data-uris/
 
 **Examples:**
 
-* manipulating_object_array.js
+- manipulating_object_array.js
 
-Objects : https://zellwk.com/blog/looping-through-js-objects/
+Objects : https://zellwk.com/blog/looping-through-js-objects/  
 https://medium.com/javascript-in-plain-english/https-medium-com-javascript-in-plain-english-why-you-should-use-an-object-not-an-array-for-lists-bee4a1fbc8bd
 
 ##### Pre-ES6:
@@ -64,7 +85,8 @@ The problem with a for...in loop is that it iterates through properties in the P
 
 ##### ES6:
 
-### Conditional REndering 
+### Conditional Rendering
+
 https://www.robinwieruch.de/conditional-rendering-react
 
 #### Enums
@@ -72,7 +94,7 @@ https://www.robinwieruch.de/conditional-rendering-react
 Example:
 `
 
-``` 
+```
     function Notification({ text, status }) {
         return (
             <div>
@@ -98,18 +120,19 @@ https://codeburst.io/a-simple-guide-to-destructuring-and-es6-spread-operator-e02
 ## React
 
 ### useEffect()
+
 https://dev.to/spukas/4-ways-to-useeffect-pf6
 
 ## Redux
 
 ### Summary
 
-* STORE
-* ACTION
-* REDUCER
-* DISPATCH
+- STORE
+- ACTION
+- REDUCER
+- DISPATCH
 
-``` 
+```
 //STORE -> Globalized state
 
 //ACTION
